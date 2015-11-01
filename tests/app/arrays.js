@@ -11,8 +11,8 @@ describe('arrays', function() {
   });
 
   it('you should be able to determine the location of an item in an array', function() {
-    expect(arraysAnswers.indexOf(a, 3)).to.eql(2);
-    expect(arraysAnswers.indexOf(a, 5)).to.eql(-1);
+    expect(arraysAnswers.indexOf(a, 3)).to.eql(4);
+    expect(arraysAnswers.indexOf(a, 5)).to.eql(undefined);
   });
 
   it('you should be able to add the values of an array', function() {
@@ -43,6 +43,7 @@ describe('arrays', function() {
 
   it('you should be able to add an item to the end of an array', function() {
     var result = arraysAnswers.append(a, 10);
+      console.log(result);
 
     expect(result).to.have.length(5);
     expect(result[result.length - 1]).to.eql(10);
